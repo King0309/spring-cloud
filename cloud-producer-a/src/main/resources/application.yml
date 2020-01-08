@@ -1,0 +1,11 @@
+server:
+  port: 9203
+
+spring:
+  application:
+    name: cloud-producer-b
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9101/eureka

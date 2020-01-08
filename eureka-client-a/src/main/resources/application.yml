@@ -1,0 +1,23 @@
+server:
+  port: 9201
+
+spring:
+  application:
+    name: eureka-client-a
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9101/eureka
+
+feign:
+  client:
+    config:
+      feignName:
+        connecTimeout: 25000
+        readTimeout: 25000
+logging:
+  file: D:/logs/spring-cloud.log
+  level:
+    com.king.s.cloud.e.client.a.feign.UserFeignClient: debug
+
