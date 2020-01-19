@@ -1,5 +1,6 @@
 package com.king.s.cloud.e.client.a.controller;
 
+import com.king.s.cloud.e.client.a.annotation.LogPrinter;
 import com.king.s.cloud.e.client.a.feign.UserFeignClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,7 @@ public class UserController {
     @Autowired
     UserFeignClient userFeignClient;
 
+    @LogPrinter
     @RequestMapping(value = "/date")
     public String userInfo(){
         String uu = userFeignClient.userInfo();
